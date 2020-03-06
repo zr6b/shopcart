@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="../res/static/css/main.css">
+  <link rel="stylesheet" type="text/css" href="../res/layui/css/layui.css">
+  <script type="text/javascript" src="../res/layui/layui.js"></script>
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+</head>
+
+<body>
+
+  <div class="site-nav-bg">
+    <div class="site-nav w1200">
+      <p class="sn-back-home">
+        <i class="layui-icon layui-icon-home"></i>
+        <a href="../index.html">首页</a>
+      </p>
+      <div class="sn-quick-menu">
+        <div class="login"><a href="login.html">登录</a></div>
+        <div class="login"><a href="res.html">注册</a></div>
+        <div class="sp-cart"><a href="shopcart.html">购物车<span class="layui-icon">&#xe657;</span></a></div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="header">
+    <div class="headerLayout w1200">
+      <div class="headerCon">
+        <h1 class="mallLogo">
+          <a href="../index.html" title="母婴商城">
+            <img src="../res/static/img/logo.png">
+          </a>
+        </h1>
+        <div class="mallSearch">
+          <div action="" class="layui-form div-form" novalidate>
+            <input type="text" name="title" required lay-verify="required" autocomplete="off" class="layui-input"
+              placeholder="请输入需要的商品">
+            <button class="layui-btn" lay-submit lay-filter="formDemo">
+              <i class="layui-icon layui-icon-search"></i>
+            </button>
+            <input type="hidden" name="" value="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="content content-nav-base  login-content">
+    <div class="main-nav">
+      <div class="inner-cont0">
+        <div class="inner-cont1 w1200">
+          <div class="inner-cont2">
+            <a href="../html/commodity.html?cat_one_id=海外购" class="active">所有商品</a>
+            <a href="#">今日团购</a>
+            <a href="#">商品资讯</a>
+            <a href="#">关于我们</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="login-bg">
+      <div class="login-cont w1200">
+        <div class="form-box">
+          <div class="layui-form" action="">
+            <legend>登录</legend>
+            <div class="layui-form-item">
+              <div class="layui-inline">
+                <div class="layui-input-inline iphone">
+                  <!-- <i class="layui-icon layui-icon-cellphone iphone-icon"></i> -->
+                  <input type="text" name="username" id="username" lay-verify="required" placeholder="请输入账号"
+                    autocomplete="off" class="layui-input">
+                </div>
+              </div>
+              <div class="layui-inline veri-code">
+                <div class="layui-input-inline">
+                  <input id="password" type="password" name="password" lay-verify="required" placeholder="请输入密码"
+                    autocomplete="off" class="layui-input">
+                  <!-- <input type="button" class="layui-btn" id="find"  value="验证码" />  -->
+                </div>
+              </div>
+            </div>
+            <div class="layui-form-item login-btn">
+              <div class="layui-input-block">
+                <button class="layui-btn" lay-submit="">登录</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="ng-promise-box">
+      <div class="ng-promise w1200">
+        <p class="text">
+          <a class="icon1" href="javascript:;">7天无理由退换货</a>
+          <a class="icon2" href="javascript:;">满99元全场免邮</a>
+          <a class="icon3" style="margin-right: 0" href="javascript:;">100%品质保证</a>
+        </p>
+      </div>
+    </div>
+    <div class="mod_help w1200">
+      <p>
+        <a href="javascript:;">关于我们</a>
+        <span>|</span>
+        <a href="javascript:;">帮助中心</a>
+        <span>|</span>
+        <a href="javascript:;">售后服务</a>
+        <span>|</span>
+        <a href="javascript:;">母婴资讯</a>
+        <span>|</span>
+        <a href="javascript:;">关于货源</a>
+      </p>
+      <p class="coty">忆小柯商城版权所有 &copy; 2020-2030</p>
+    </div>
+  </div>
+  <script src="../res/layui/layui.all.js"></script>
+  <script src="../res/static/js/util/jquery.min.js"></script>
+
+  <script type="text/javascript">
+    $('button').click(function () {
+      $.ajax({
+        url: '../res/static/server/goods_login.php',
+        data: {
+          userName: $('#username').val(),
+          userPwd: $('#password').val()
+        },
+        type: 'post',
+        dataType: 'json',
+        success(res) {
+         
+          if (res == 1) {
+            localStorage.setItem('login', 1);
+            window.alert('恭喜您登录成功,点击确定跳转登录页面')
+            if (window.location.search == '') {
+              // 如果地址参数是空字符串,证明没有参数,跳转至首页面
+              window.location.href = '../index.html';
+            } else {
+              // 如果有地址参数,跳转至地址参数表示的页面
+              window.location.href = window.location.search.substring(5);
+            }
+           
+            
+          } else {
+            // 弹出提示信息,跳转首页面
+            window.alert('登录失败');
+          }
+        }
+      })
+    })
+  </script>
+
+</body>
+
+</html>

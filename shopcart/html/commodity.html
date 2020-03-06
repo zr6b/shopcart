@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="../res/static/css/main.css">
+  <link rel="stylesheet" type="text/css" href="../res/layui/css/layui.css">
+  <link rel="stylesheet" href="../res/jquery-pagination/pagination.css">
+  <script type="text/javascript" src="../res/layui/layui.js"></script>
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+</head>
+<style>
+  .hide {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+</style>
+
+<body>
+
+  <div class="site-nav-bg">
+    <div class="site-nav w1200">
+      <p class="sn-back-home">
+        <i class="layui-icon layui-icon-home"></i>
+        <a href="../index.html">首页</a>
+      </p>
+      <div class="sn-quick-menu">
+        <div class="login"><a href="login.html">登录</a></div>
+        <div class="login"><a href="res.html">注册</a></div>
+        <div class="sp-cart"><a href="shopcart.html">购物车<span class="layui-icon">&#xe657;</span></a></div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="header">
+    <div class="headerLayout w1200">
+      <div class="headerCon">
+        <h1 class="mallLogo">
+          <a href="../index.html">
+            <img src="../res/static/img/logo.png">
+          </a>
+        </h1>
+        <div class="mallSearch">
+          <div action="" class="layui-form div-form" novalidate>
+            <input type="text" name="title" required lay-verify="required" autocomplete="off" class="layui-input"
+              placeholder="请输入需要的商品">
+            <button class="layui-btn" lay-submit lay-filter="formDemo">
+              <i class="layui-icon layui-icon-search"></i>
+            </button>
+            <input type="hidden" name="" value="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="content content-nav-base commodity-content">
+    <div class="main-nav">
+      <div class="inner-cont0">
+        <div class="inner-cont1 w1200">
+          <div class="inner-cont2">
+            <a href="../html/commodity.html?cat_one_id=海外购" class="active">所有商品</a>
+            <a href="#">今日团购</a>
+            <a href="#">商品资讯</a>
+            <a href="#">关于我们</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="commod-cont-wrap">
+      <div class="commod-cont w1200 layui-clear">
+        <div class="left-nav">
+          <div class="title">所有分类</div>
+          <div class="list-box">
+            <dl>
+              <a href="../html/commodity.html?cat_one_id=食品酒水">
+                <dt>食品酒水</dt>
+
+              </a>
+            </dl>
+            <dl>
+              <a href="../html/commodity.html?cat_one_id=手机相机">
+                <dt>手机相机</dt>
+
+              </a>
+            </dl>
+            <dl>
+              <a href="../html/commodity.html?cat_one_id=童装玩具">
+                <dt>童装玩具</dt>
+              </a>
+            </dl>
+            <dl>
+              <a href="../html/commodity.html?cat_one_id=家装建材">
+                <dt>家装建材</dt>
+              </a>
+            </dl>
+            <dl>
+              <a href="../html/commodity.html?cat_one_id=奶粉尿裤">
+                <dt>奶粉尿裤</dt>
+              </a>
+            </dl>
+            <dl>
+              <a href="../html/commodity.html?cat_one_id=钟表眼镜">
+                <dt>钟表眼镜</dt>
+              </a>
+            </dl>
+            <dl>
+              <a href="../html/commodity.html?cat_one_id=邮币乐器">
+                <dt>邮币乐器</dt>
+              </a>
+            </dl>
+            <dl>
+              <a href="../html/commodity.html?cat_one_id=皮具箱包">
+                <dt>皮具箱包</dt>
+              </a>
+            </dl>
+            <dl>
+              <a href="../html/commodity.html?cat_one_id=个护健康">
+                <dt>个护健康</dt>
+              </a>
+            </dl>
+          </div>
+        </div>
+        <div class="right-cont-wrap">
+          <div class="right-cont">
+            <div class="sort layui-clear">
+              <a class="active" href="javascript:;" event='volume'>销量</a>
+              <a href="javascript:;" event='price'>价格</a>
+              <a href="javascript:;" event='newprod'>新品</a>
+              <a href="javascript:;" event='collection'>收藏</a>
+            </div>
+
+            <div class="cont-list layui-clear" id="list-cont">
+            </div>
+            <!-- <div id="demo0" style="text-align: center;"></div> -->
+            <div class="M-box m-style"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+  </div>
+  <script src="../res/static/js/util/jquery.min.js"></script>
+  <script src="../res/jquery-pagination/jquery.pagination.js"></script>
+
+  <script>
+    // $('.sort a').on('click', function () {
+    //   $(this).addClass('active').siblings().removeClass('active');
+    // })
+
+    let arr = (decodeURI(window.location.search).substring(1)).split('=');
+    // console.log(arr);
+
+    getAjax(arr[1]);
+
+    function getAjax(key, page = 1, line = 12) {
+      $.ajax({
+        url: '../res/static/server/goods_select.php',
+        data: {
+          cat_one_id: key,
+          page: page,
+          line: line,
+        },
+        type: 'get',
+        dataType: 'json',
+        success(res) {
+          // console.log(res);
+
+          // 存储生成li标签的变量
+          let str = '';
+
+          res.forEach(function (item) {
+
+            str += `<div class="item">
+                <div class="img">
+                  <a href="../html/details.html?goods_id=${item.goods_id};"><img style="width: 280px; height: 280px;" src="${item.goods_big_logo}"></a>
+                </div>
+                <div class="text">
+                  <p class="title hide">${item.goods_name}</p>
+                  <p class="price">
+                    <span class="pri">￥${item.goods_price}</span>
+                    <span class="nub">${item.goods_number}付款</span>
+                  </p>
+                </div>
+              </div> `;
+          })
+
+          $('.cont-list').html(str);
+
+          $('.M-box').pagination({
+            pageCount: res[0]['sumPage'], // 总页数
+            totalData: res[0]['row'], // 总数据
+            current: res[0]['page'], // 当前页
+            showData:12,
+            count: 2,
+            coping: true,
+            homePage: '首页',
+            endPage: '末页',
+            prevContent: '上一页',
+            nextContent: '下一页',
+            callback: function (result) {
+              // 获取点击标签,表示的页数
+              // console.log( result.getCurrent() );
+
+              // 根据点击的页数,发送ajax请求,获取对应页数的数据,生成新的页面内容
+              getAjax(arr[1], result.getCurrent());
+            }
+
+          });
+
+        }
+      })
+
+    }
+
+    // 在请求成功之后,来进行分页显示
+    // 每一个res中的数据信息都包含分页显示需要的参数
+    // 直接使用第一个数据中的信息
+    // $('#demo0').laypage.render({
+
+    //   elem: 'demo0',
+    //   count: res[0]['row'],
+    //   limit: 15,
+
+
+  </script>
+
+
+</body>
+
+</html>

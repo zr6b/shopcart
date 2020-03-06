@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="./res/static/css/main.css">
+  <link rel="stylesheet" type="text/css" href="./res/layui/css/layui.css">
+  <script type="text/javascript" src="./res/layui/layui.js"></script>
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+</head>
+
+<body id="list-cont">
+  <div class="site-nav-bg">
+    <div class="site-nav w1200">
+      <p class="sn-back-home">
+        <i class="layui-icon layui-icon-home"></i>
+        <a href="./index.html">首页</a>
+      </p>
+      <div class="sn-quick-menu">
+        <div class="login"><a href="./html/login.html">登录</a></div>
+        <div class="login"><a href="./html/res.html">注册</a></div>
+        <div class="sp-cart"><a href="./html/shopcart.html">购物车<span class="layui-icon">&#xe657;</span></a></div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="header">
+    <div class="headerLayout w1200">
+      <div class="headerCon">
+        <h1 class="mallLogo">
+          <a href="./index.html" title="母婴商城">
+            <img src="./res/static/img/logo.png">
+          </a>
+        </h1>
+        <div class="mallSearch">
+          <div action="" class="layui-form div-form" novalidate>
+            <input type="text" name="title" required lay-verify="required" autocomplete="off" class="layui-input"
+              placeholder="请输入需要的商品">
+            <button class="layui-btn" lay-submit lay-filter="formDemo">
+              <i class="layui-icon layui-icon-search"></i>
+            </button>
+            <input type="hidden" name="" value="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="content">
+    <div class="main-nav">
+      <div class="inner-cont0">
+        <div class="inner-cont1 w1200">
+          <div class="inner-cont2">
+            <a href="./html/commodity.html?cat_one_id=海外购" class="active">所有商品</a>
+            <a href="#">今日团购</a>
+            <a href="#">商品资讯</a>
+            <a href="#">关于我们</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="category-con">
+      <div class="category-inner-con w1200">
+        <div class="category-type">
+          <h3>全部分类</h3>
+        </div>
+        <div class="category-tab-content">
+          <div class="nav-con">
+            <ul class="normal-nav layui-clear">
+              <li class="nav-item">
+                <div class="title"><a href="./html/commodity.html?cat_one_id=手机相机">手机相机</a></div>
+                <p><a href="#">安卓</a><a href="#">苹果</a><a href="#">5G手机</a></p>
+                <i class="layui-icon layui-icon-right"></i>
+              </li>
+              <li class="nav-item">
+                <div class="title"><a href="./html/commodity.html?cat_one_id=童装玩具">童装玩具
+                  </a></div>
+                <p><a href="#">遥控玩具</a><a href="#">积木拼插</a></p>
+                <i class="layui-icon layui-icon-right"></i>
+              </li>
+              <li class="nav-item">
+                <div class="title"><a href="./html/commodity.html?cat_one_id=家装建材">家装建材</a></div>
+                <p><a href="#">沙发</a><a href="#">电动窗帘</a></p>
+                <i class="layui-icon layui-icon-right"></i>
+              </li>
+              <li class="nav-item">
+                <div class="title"><a href="./html/commodity.html?cat_one_id=奶粉尿裤">奶粉尿裤</div>
+                <p><a href="#">婴幼奶粉</a><a href="#">纸尿裤</a><a href="#">孕妇装</a></p>
+                <i class="layui-icon layui-icon-right"></i>
+              </li>
+              <li class="nav-item">
+                <div class="title"><a href="./html/commodity.html?cat_one_id=个护健康">个护健康</a></div>
+                <p><a href="#">电动牙刷</a><a href="#">洁面乳</a></p>
+                <i class="layui-icon layui-icon-right"></i>
+              </li>
+              <li class="nav-item">
+                <div class="title"> <a href="./html/commodity.html?cat_one_id=皮具箱包">皮具箱包</div>
+                <p><a href="#">钱包</a><a href="#">行李箱</a><a href="#">皮鞋</a></p>
+                <i class="layui-icon layui-icon-right"></i>
+              </li>
+              <li class="nav-item">
+                <div class="title"><a href="./html/commodity.html?cat_one_id=钟表眼镜">钟表眼镜</div>
+                <p><a href="#">隐形眼镜</a><a href="#">天梭</a><a href="#">太阳镜</a></p>
+                <i class="layui-icon layui-icon-right"></i>
+              </li>
+              <li class="nav-item nobor">
+                <div class="title"> <a href="./html/commodity.html?cat_one_id=食品酒水">食品酒水</div>
+                <p><a href="#">孕妇装</a><a href="#">啤酒</a><a href="#">矿泉水</a></p>
+                <i class="layui-icon layui-icon-right"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="category-banner">
+        <div class="w1200">
+          <img src="./res/static/img/banner4.png">
+        </div>
+      </div>
+    </div>
+    <div class="floors">
+      <div class="sk">
+        <div class="sk_inner w1200">
+          <div class="sk_hd">
+            <a href="javascript:;">
+              <img src="./res/static/img/s_img1.jpg">
+            </a>
+          </div>
+          <div class="sk_bd">
+            <div class="layui-carousel" id="test1">
+              <div carousel-item>
+                <div class="item-box">
+                  <div class="item">
+                    <a href="javascript:;"><img src="./res/static/img/s_img2.jpg"></a>
+                    <div class="title">宝宝五彩袜棉质舒服</div>
+                    <div class="price">
+                      <span>￥49.00</span>
+                      <del>￥99.00</del>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <a href="javascript:;"><img src="./res/static/img/s_img3.jpg"></a>
+                    <div class="title">宝宝五彩袜棉质舒服</div>
+                    <div class="price">
+                      <span>￥49.00</span>
+                      <del>￥99.00</del>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <a href="javascript:;"><img src="./res/static/img/s_img4.jpg"></a>
+                    <div class="title">宝宝五彩袜棉质舒服</div>
+                    <div class="price">
+                      <span>￥49.00</span>
+                      <del>￥99.00</del>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <a href="javascript:;"><img src="./res/static/img/s_img5.jpg"></a>
+                    <div class="title">宝宝五彩袜棉质舒服</div>
+                    <div class="price">
+                      <span>￥49.00</span>
+                      <del>￥99.00</del>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-box">
+                  <div class="item">
+                    <a href="javascript:;"><img src="./res/static/img/s_img2.jpg"></a>
+                    <div class="title">宝宝五彩袜棉质舒服</div>
+                    <div class="price">
+                      <span>￥49.00</span>
+                      <del>￥99.00</del>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <a href="javascript:;"><img src="./res/static/img/s_img3.jpg"></a>
+                    <div class="title">宝宝五彩袜棉质舒服</div>
+                    <div class="price">
+                      <span>￥49.00</span>
+                      <del>￥99.00</del>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <a href="javascript:;"><img src="./res/static/img/s_img4.jpg"></a>
+                    <div class="title">宝宝五彩袜棉质舒服</div>
+                    <div class="price">
+                      <span>￥49.00</span>
+                      <del>￥99.00</del>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <a href="javascript:;"><img src="./res/static/img/s_img5.jpg"></a>
+                    <div class="title">宝宝五彩袜棉质舒服</div>
+                    <div class="price">
+                      <span>￥49.00</span>
+                      <del>￥99.00</del>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <div class="hot-recommend-con">
+      <div class="hot-con1 w1200 layui-clear">
+        <div class="item">
+          <h4>热销推荐</h4>
+          <div class="big-img">
+            <a href="javascript:;"><img src="./res/static/img/hot1.png"></a>
+          </div>
+          <div class="small-img">
+            <a href="javascript:;"><img src="./res/static/img/hot2.png" alt=""></a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="top-img">
+            <a href="javascript:;"><img src="./res/static/img/hot5.jpg"></a>
+          </div>
+          <div class="bottom-img">
+            <a href="javascript:;"><img src="./res/static/img/hot6.jpg"></a>
+            <a class="baby-cream" href="javascript:;"><img src="./res/static/img/hot7.jpg"></a>
+          </div>
+        </div>
+        <div class="item item1 margin0 padding0">
+          <a href="javascript:;"><img src="./res/static/img/hot8.jpg"></a>
+          <a href="javascript:;"><img class="btm-img" src="./res/static/img/hot9.jpg"></a>
+        </div>
+      </div>
+    </div>
+    <div class="content content-nav-base buytoday-content">
+      <div id="list-cont">
+        <div class="banner-box">
+          <div class="banner"></div>
+        </div>
+        <div class="product-list-box">
+          <div class="product-list w1200">
+            <!-- <div class="tab-title">
+              <a href="javascript:;" class="active tuang" data-content="tuangou">今日团购</a>
+            </div> -->
+            <!-- <div class="list-cont" cont='tuangou'>
+              <div class="item-box layui-clear">
+                <div class="item">
+                  <img src="./res/static/img/tuan_img1.jpg" alt="">
+                  <div class="text-box">
+                    <p class="title">宝宝专用硅胶环保饭碗四套+调羹+筷子自助学吃饭套装</p>
+                    <p class="plic">
+                      <span class="ciur-pic">￥100.00</span>
+                      <span class="Ori-pic">￥208.00</span>
+                      <span class="discount">5折</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="./res/static/img/tuan_img2.jpg" alt="">
+                  <div class="text-box">
+                    <p class="title">宝宝专用硅胶环保饭碗四套+调羹+筷子自助学吃饭套装</p>
+                    <p class="plic">
+                      <span class="ciur-pic">￥100.00</span>
+                      <span class="Ori-pic">￥208.00</span>
+                      <span class="discount">5折</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="./res/static/img/tuan_img3.jpg" alt="">
+                  <div class="text-box">
+                    <p class="title">宝宝专用硅胶环保饭碗四套+调羹+筷子自助学吃饭套装</p>
+                    <p class="plic">
+                      <span class="ciur-pic">￥100.00</span>
+                      <span class="Ori-pic">￥208.00</span>
+                      <span class="discount">5折</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="./res/static/img/tuan_img4.jpg" alt="">
+                  <div class="text-box">
+                    <p class="title">宝宝专用硅胶环保饭碗四套+调羹+筷子自助学吃饭套装</p>
+                    <p class="plic">
+                      <span class="ciur-pic">￥100.00</span>
+                      <span class="Ori-pic">￥208.00</span>
+                      <span class="discount">5折</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="./res/static/img/tuan_img1.jpg" alt="">
+                  <div class="text-box">
+                    <p class="title">宝宝专用硅胶环保饭碗四套+调羹+筷子自助学吃饭套装</p>
+                    <p class="plic">
+                      <span class="ciur-pic">￥100.00</span>
+                      <span class="Ori-pic">￥208.00</span>
+                      <span class="discount">5折</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="./res/static/img/tuan_img2.jpg" alt="">
+                  <div class="text-box">
+                    <p class="title">宝宝专用硅胶环保饭碗四套+调羹+筷子自助学吃饭套装</p>
+                    <p class="plic">
+                      <span class="ciur-pic">￥100.00</span>
+                      <span class="Ori-pic">￥208.00</span>
+                      <span class="discount">5折</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="./res/static/img/tuan_img3.jpg" alt="">
+                  <div class="text-box">
+                    <p class="title">宝宝专用硅胶环保饭碗四套+调羹+筷子自助学吃饭套装</p>
+                    <p class="plic">
+                      <span class="ciur-pic">￥100.00</span>
+                      <span class="Ori-pic">￥208.00</span>
+                      <span class="discount">5折</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="./res/static/img/tuan_img4.jpg" alt="">
+                  <div class="text-box">
+                    <p class="title">宝宝专用硅胶环保饭碗四套+调羹+筷子自助学吃饭套装</p>
+                    <p class="plic">
+                      <span class="ciur-pic">￥100.00</span>
+                      <span class="Ori-pic">￥208.00</span>
+                      <span class="discount">5折</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="./res/static/img/tuan_img1.jpg" alt="">
+                  <div class="text-box">
+                    <p class="title">宝宝专用硅胶环保饭碗四套+调羹+筷子自助学吃饭套装</p>
+                    <p class="plic">
+                      <span class="ciur-pic">￥100.00</span>
+                      <span class="Ori-pic">￥208.00</span>
+                      <span class="discount">5折</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="./res/static/img/tuan_img2.jpg" alt="">
+                  <div class="text-box">
+                    <p class="title">宝宝专用硅胶环保饭碗四套+调羹+筷子自助学吃饭套装</p>
+                    <p class="plic">
+                      <span class="ciur-pic">￥100.00</span>
+                      <span class="Ori-pic">￥208.00</span>
+                      <span class="discount">5折</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="./res/static/img/tuan_img3.jpg" alt="">
+                  <div class="text-box">
+                    <p class="title">宝宝专用硅胶环保饭碗四套+调羹+筷子自助学吃饭套装</p>
+                    <p class="plic">
+                      <span class="ciur-pic">￥100.00</span>
+                      <span class="Ori-pic">￥208.00</span>
+                      <span class="discount">5折</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="./res/static/img/tuan_img4.jpg" alt="">
+                  <div class="text-box">
+                    <p class="title">宝宝专用硅胶环保饭碗四套+调羹+筷子自助学吃饭套装</p>
+                    <p class="plic">
+                      <span class="ciur-pic">￥100.00</span>
+                      <span class="Ori-pic">￥208.00</span>
+                      <span class="discount">5折</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="./res/static/img/tuan_img4.jpg" alt="">
+                  <div class="text-box">
+                    <p class="title">宝宝专用硅胶环保饭碗四套+调羹+筷子自助学吃饭套装</p>
+                    <p class="plic">
+                      <span class="ciur-pic">￥100.00</span>
+                      <span class="Ori-pic">￥208.00</span>
+                      <span class="discount">5折</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="./res/static/img/tuan_img4.jpg" alt="">
+                  <div class="text-box">
+                    <p class="title">宝宝专用硅胶环保饭碗四套+调羹+筷子自助学吃饭套装</p>
+                    <p class="plic">
+                      <span class="ciur-pic">￥100.00</span>
+                      <span class="Ori-pic">￥208.00</span>
+                      <span class="discount">5折</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="./res/static/img/tuan_img4.jpg" alt="">
+                  <div class="text-box">
+                    <p class="title">宝宝专用硅胶环保饭碗四套+调羹+筷子自助学吃饭套装</p>
+                    <p class="plic">
+                      <span class="ciur-pic">￥100.00</span>
+                      <span class="Ori-pic">￥208.00</span>
+                      <span class="discount">5折</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="./res/static/img/tuan_img4.jpg" alt="">
+                  <div class="text-box">
+                    <p class="title">宝宝专用硅胶环保饭碗四套+调羹+筷子自助学吃饭套装</p>
+                    <p class="plic">
+                      <span class="ciur-pic">￥100.00</span>
+                      <span class="Ori-pic">￥208.00</span>
+                      <span class="discount">5折</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="./res/static/img/tuan_img4.jpg" alt="">
+                  <div class="text-box">
+                    <p class="title">宝宝专用硅胶环保饭碗四套+调羹+筷子自助学吃饭套装</p>
+                    <p class="plic">
+                      <span class="ciur-pic">￥100.00</span>
+                      <span class="Ori-pic">￥208.00</span>
+                      <span class="discount">5折</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="./res/static/img/tuan_img4.jpg" alt="">
+                  <div class="text-box">
+                    <p class="title">宝宝专用硅胶环保饭碗四套+调羹+筷子自助学吃饭套装</p>
+                    <p class="plic">
+                      <span class="ciur-pic">￥100.00</span>
+                      <span class="Ori-pic">￥208.00</span>
+                      <span class="discount">5折</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="./res/static/img/tuan_img4.jpg" alt="">
+                  <div class="text-box">
+                    <p class="title">宝宝专用硅胶环保饭碗四套+调羹+筷子自助学吃饭套装</p>
+                    <p class="plic">
+                      <span class="ciur-pic">￥100.00</span>
+                      <span class="Ori-pic">￥208.00</span>
+                      <span class="discount">5折</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="./res/static/img/tuan_img4.jpg" alt="">
+                  <div class="text-box">
+                    <p class="title">宝宝专用硅胶环保饭碗四套+调羹+筷子自助学吃饭套装</p>
+                    <p class="plic">
+                      <span class="ciur-pic">￥100.00</span>
+                      <span class="Ori-pic">￥208.00</span>
+                      <span class="discount">5折</span>
+                    </p>
+                  </div>
+                </div>
+                <div id="demo0" style="text-align: center;"></div>
+              </div>
+       
+            </div> -->
+          </div>
+          <div class="footer-wrap">
+            <div class="footer w1200">
+              <div class="title">
+                <h3>团购销量榜</h3>
+              </div>
+              <div class="list-box layui-clear" id="footerList">
+                <div class="item">
+                  <img src="./res/static/img/tuan_img5.jpg" alt="">
+                  <div class="text">
+                    <div class="right-title-number">1</div>
+                    <div class="commod">
+                      <p>宝宝打底衣棉麻透气不起球白色多色可选</p>
+                      <span>￥100.00</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="./res/static/img/tuan_img6.jpg" alt="">
+                  <div class="text">
+                    <div class="right-title-number">1</div>
+                    <div class="commod">
+                      <p>宝宝打底衣棉麻透气不起球白色多色可选</p>
+                      <span>￥100.00</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="item">
+                  <img src="./res/static/img/tuan_img7.jpg" alt="">
+                  <div class="text">
+                    <div class="right-title-number">1</div>
+                    <div class="commod">
+                      <p>宝宝打底衣棉麻透气不起球白色多色可选</p>
+                      <span>￥100.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer" style="background: #2f2f2f;">
+        <div class="ng-promise-box">
+          <div class="ng-promise w1200">
+            <p class="text">
+              <a class="icon1" href="javascript:;">7天无理由退换货</a>
+              <a class="icon2" href="javascript:;">满99元全场免邮</a>
+              <a class="icon3" style="margin-right: 0" href="javascript:;">100%品质保证</a>
+            </p>
+          </div>
+        </div>
+        <div class="mod_help w1200">
+          <p>
+            <a href="javascript:;">关于我们</a>
+            <span>|</span>
+            <a href="javascript:;">帮助中心</a>
+            <span>|</span>
+            <a href="javascript:;">售后服务</a>
+            <span>|</span>
+            <a href="javascript:;">商品资讯</a>
+            <span>|</span>
+            <a href="javascript:;">关于货源</a>
+          </p>
+          <p class="coty">山竹商城版权所有 &copy; 2012-2020 More Templates </p>
+        </div>
+      </div>
+      <script type="text/javascript">
+        layui.config({
+          base: './res/static/js/util/' //你存放新模块的目录，注意，不是layui的模块目录
+        }).use(['mm', 'carousel'], function () {
+          var carousel = layui.carousel,
+            mm = layui.mm;
+          var option = {
+            elem: '#test1',
+            width: '100%' //设置容器宽度
+              ,
+            arrow: 'always',
+            height: '298',
+            indicator: 'none'
+          }
+          carousel.render(option);
+
+
+        });
+      </script>
+</body>
+
+</html>
